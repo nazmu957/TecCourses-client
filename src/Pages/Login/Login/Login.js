@@ -90,10 +90,8 @@ const Login = () => {
     </Form>
        <div className='mt-4 mb-2 text-center'>
          <h5>LogIn  With</h5>
-          <Button onClick={handleGoogleSignIn}>Google</Button> 
+          <Button className="me-3" onClick={handleGoogleSignIn}>Google</Button> 
           <Button onClick={handleGithubSign} >GitHub</Button> 
-              <br/>
-           
         </div>
   </Container>
     );
