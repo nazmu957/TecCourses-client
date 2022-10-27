@@ -11,7 +11,7 @@ const NotFound = () => {
             src={notfound}
             width="100%"
             height="700"
-            alt="React Bootstrap logo"
+            
           />
         </div>
       </Row>
