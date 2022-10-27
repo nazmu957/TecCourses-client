@@ -8,7 +8,8 @@ const Category = () => {
     
     return (
         <div >
-            <h2 className="text-center pb-3">Course List: {categoryCourses.length}</h2>
+             <h1 className="text-center text-primary" >Course Details</h1>
+            <h2 className="text-center pb-3">In this category total course: {categoryCourses.length}</h2>
             {
                 categoryCourses.map(courses => <CoursesReview
                 key={courses._id}
