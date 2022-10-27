@@ -73,7 +73,7 @@ const Header = () => {
                   >
                     LogIn
                   </Link>
-                  {/* <Button className="bg-light"><Link to="/register">Register</Link></Button> */}
+                 
                 </div>
               )}
             </Nav.Link>
