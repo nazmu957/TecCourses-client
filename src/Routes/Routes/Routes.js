@@ -18,26 +18,36 @@ export const routes = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/courses')
+        loader: () => fetch('https://teccourses-server.vercel.app/courses'),
       },
       {
-          path: '/category/:id',
-          element: <Category></Category>,
-          loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
+        path: '/course',
+        element: <Category></Category>,
+        loader: () => fetch('https://teccourses-server.vercel.app/courses'),
       },
       {
-          path: 'checkout/:id',
-          element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
-          
+        path: '/category/:id',
+        element: <Category></Category>,
+        loader: ({ params }) =>
+          fetch(`https://teccourses-server.vercel.app/category/${params.id}`),
       },
       {
-          path: '/fqa',
-          element: <Fqa></Fqa>,
+        path: 'checkout/:id',
+        element: (
+          <PrivateRoute>
+            <Checkout></Checkout>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://teccourses-server.vercel.app/courses/${params.id}`),
       },
       {
-          path: '/blog',
-          element: <Blog></Blog> ,
+        path: '/fqa',
+        element: <Fqa></Fqa>,
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>,
       },
       {
         path: '/login',
@@ -45,13 +55,12 @@ export const routes = createBrowserRouter([
       },
       {
         path: '/register',
-        element: <Register></Register>
+        element: <Register></Register>,
       },
-     
     ],
   },
-   {
-        path: '*',
-        element: <NotFound></NotFound>
-      }
+  {
+    path: '*',
+    element: <NotFound></NotFound>,
+  },
 ])

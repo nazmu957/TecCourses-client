@@ -48,10 +48,10 @@ const Header = () => {
             <Link className="ps-3 text-decoration-none fs-5 fw-bold" to="/fqa">
               FQA
             </Link>
-            <Link className="ps-4 text-decoration-none fs-5 fw-bold" to="/">
+            <Link className="ps-3 text-decoration-none fs-5 fw-bold" to='/course'>
               Courses
             </Link>
-            <Link className="ps-4 text-decoration-none fs-5 fw-bold" to="/blog">
+            <Link className="ps-3 text-decoration-none fs-5 fw-bold" to="/blog">
               Blog
             </Link>
           </Nav>
@@ -68,7 +68,7 @@ const Header = () => {
               ) : (
                 <div className="d-flex">
                   <Link
-                    className="text-decoration-none fs-5 fw-bold mt-1"
+                    className="text-decoration-none fs-5 fw-bold mt-1 ms-3"
                     to="/login"
                   >
                     LogIn
@@ -88,7 +88,7 @@ const Header = () => {
                 ></Image>
               ) : (
                 
-                  <FaUserAlt className="text-dark" style={{ height: '30px', width:'30px' }}></FaUserAlt>
+                  <FaUserAlt className="text-dark ms-3" style={{ height: '30px', width:'30px' }}></FaUserAlt>
                
               )}
             </Nav.Link>
