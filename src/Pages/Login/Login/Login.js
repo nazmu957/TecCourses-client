@@ -1,4 +1,4 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
@@ -6,31 +6,34 @@ import Form from 'react-bootstrap/Form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
-//gmail login
 
 const Login = () => {
-
-    //google login
-      
     const {providerLogin} = useContext(AuthContext);
-    const googleProvider = new GoogleAuthProvider()
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
     const handleGoogleSignIn = () =>{
         providerLogin(googleProvider)
         .then(result =>{
             const user = result.user;
             console.log(user);
+            navigate(from,{replace: true});
         })
         .catch(error => console.error(error))
     }
-    const [categories, setCategories] = useState([]);
-
-
-
-
-
-
-
+   // const [categories, setCategories] = useState([]);
+    
+   const handleGithubSign = () =>{
+     providerLogin(githubProvider)
+     .then(result => {
+       const user = result.user; 
+       console.log(user);
+       navigate(from,{replace: true});
+     })
+     .catch(error => {
+       console.error('error: ', error)
+     })
+   }
     const [error, setError] = useState('');
     const {signIn} = useContext(AuthContext);
     const navigate = useNavigate();
@@ -88,9 +91,10 @@ const Login = () => {
        <div className='mt-4 mb-2 text-center'>
          <h5>LogIn  With</h5>
           <Button onClick={handleGoogleSignIn}>Google</Button> 
+          <Button onClick={handleGithubSign} >GitHub</Button> 
               <br/>
            
-      </div>
+        </div>
   </Container>
     );
 };

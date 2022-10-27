@@ -5,29 +5,29 @@ import { Link } from 'react-router-dom'
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider'
 
 const SideNav = () => {
-  const { providerLogin } = useContext(AuthContext)
-  const googleProvider = new GoogleAuthProvider()
-  const githubProvider = new GithubAuthProvider()
+  // const { providerLogin } = useContext(AuthContext)
+  // const googleProvider = new GoogleAuthProvider()
+  // const githubProvider = new GithubAuthProvider()
 
-  const handleGoogleSignIn = () => {
-    providerLogin(googleProvider)
-      .then((result) => {
-        const user = result.user
-        console.log(user)
-      })
-      .catch((error) => console.error(error))
-  }
-  const handleGithubSignIn = () => {
-    providerLogin(githubProvider)
-      .then((result) => {
-        const user = result.user
-
-        console.log(user)
-      })
-      .catch((error) => {
-        console.error('error: ', error)
-      })
-  }
+  // const handleGoogleSignIn = () => {
+  //   providerLogin(googleProvider)
+  //     .then((result) => {
+  //       const user = result.user
+  //       console.log(user)
+        
+  //     })
+  //     .catch((error) => console.error(error))
+  // }
+  // const handleGithubSignIn = () => {
+  //   providerLogin(githubProvider)
+  //     .then((result) => {
+  //       const user = result.user
+  //       console.log(user)
+  //     })
+  //     .catch((error) => {
+  //       console.error('error: ', error)
+  //     })
+  // }
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
@@ -47,12 +47,12 @@ const SideNav = () => {
           </Button>
         ))}
       </div  >
-      <div className="text-center pb-3 pt-5">
+      {/* <div className="text-center pb-3 pt-5">
           <h2 className="fs-4">Sign In With</h2>
       <Button className="me-3" onClick={handleGoogleSignIn}>Google</Button>
       
       <Button onClick={handleGithubSignIn}>Github</Button>
-      </div>
+      </div> */}
     </div>
   )
 }
