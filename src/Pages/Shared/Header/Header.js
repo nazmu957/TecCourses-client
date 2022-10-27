@@ -44,13 +44,13 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Link className="ps-3 text-decoration-none fs-5 fw-bold" to="/">
+            <Link className="ps-3 text-decoration-none fs-5 fw-bold" to="/fqa">
               FQA
             </Link>
             <Link className="ps-4 text-decoration-none fs-5 fw-bold" to="/">
               Courses
             </Link>
-            <Link className="ps-4 text-decoration-none fs-5 fw-bold" to="/">
+            <Link className="ps-4 text-decoration-none fs-5 fw-bold" to="/blog">
               Blog
             </Link>
           </Nav>
