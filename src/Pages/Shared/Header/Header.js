@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider'
 import SideNav from '../SideNav/SideNav'
 import logo from '../../../images/logo.png'
+import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
   const [state, setState] = useState(false)
@@ -86,7 +87,9 @@ const Header = () => {
                   title={user?.displayName}
                 ></Image>
               ) : (
-                <Button>logo</Button>
+                
+                  <FaUserAlt className="text-dark" style={{ height: '30px', width:'30px' }}></FaUserAlt>
+               
               )}
             </Nav.Link>
           </Nav>
