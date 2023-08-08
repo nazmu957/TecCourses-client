@@ -9,7 +9,7 @@ const Checkout = () => {
   const { title, details, image_url, category_id } = courses
     return (
     <>
-      <Card className="mt-5">
+      <Card className="mt-5 mb-5">
         <Card.Img variant="top" src={image_url} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
