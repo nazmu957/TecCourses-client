@@ -37,7 +37,7 @@ const CoursesReview = ({ courses }) => {
               )}
             </p>
             <p className="card-text">
-              <small className="text-muted">Total View: {total_view}</small>
+              <small className="text-muted">Total Views: {total_view}</small>
             </p>
           </div>
         </div>

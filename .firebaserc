@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "teccourses-8c748"
-  }
+    "default": "teccourses-8c748",
+    "yes": "teccourses-65632"
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -20,8 +20,7 @@ const Login = () => {
             navigate(from,{replace: true});
         })
         .catch(error => console.error(error))
-    }
-   // const [categories, setCategories] = useState([]);
+    } // const [categories, setCategories] = useState([]);
     
    const handleGithubSign = () =>{
      providerLogin(githubProvider)
@@ -91,7 +90,7 @@ const Login = () => {
        <div className='mt-4 mb-2 text-center'>
          <h5>LogIn  With</h5>
           <Button className="me-3" onClick={handleGoogleSignIn}>Google</Button> 
-          <Button onClick={handleGithubSign} >GitHub</Button> 
+          {/* <Button onClick={handleGithubSign} >GitHub</Button>  */}
         </div>
   </Container>
     );
